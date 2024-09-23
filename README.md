@@ -1,14 +1,18 @@
 # DS-4002-Project-1
 
-## Section 1
+## Section 1 - Software & Platform
 
 The main softwares used for this project incldues google colab using python, and VS code with python. 
 We used Python's request and BeautifulSoup packages to scrape the movie reviews from IMBd, and the VADER SentimentIntensityAnalyzer package to analyze the text reviews and get our sentiment scores.
 Most of the coding was performed on a Windows machine, with some also done using a Mac. 
 
-## Section 2
+## Section 2 - Map of Documentation
 
-## Section 3 
+In this section, you should provide an outline or tree illustrating the
+hierarchy of folders and subfolders contained in your Project Folder,
+and listing the files stored in each folder or subfolder.
+
+## Section 3 - Instructions
 
 Step 1: Find our initial dataset
 
