@@ -4,7 +4,7 @@
 
 The main softwares used for this project incldues google colab using python, and VS code with python. 
 We used Python's request and BeautifulSoup packages to scrape the movie reviews from IMBd, and the VADER SentimentIntensityAnalyzer package to analyze the text reviews and get our sentiment scores.
-Most of the coding was performed on a Windows machine, with some also being done using a Mac. 
+Most of the coding was performed on a Windows machine, with some also done using a Mac. 
 
 ## Section 2
 
