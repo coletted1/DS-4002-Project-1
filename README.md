@@ -1,38 +1,95 @@
-# DS-4002-Project-1
+# DS-4002-Project-1 
 
 ## Section 1 - Software & Platform
 
-The main softwares used for this project incldues google colab using python, and VS code with python. 
-We used Python's request and BeautifulSoup packages to scrape the movie reviews from IMBd, and the VADER SentimentIntensityAnalyzer package to analyze the text reviews and get our sentiment scores.
-Most of the coding was performed on a Windows machine, with some also done using a Mac. 
+The main software used for this project includes Google Colab with Python and VS Code with Python. We used Python's **requests** and **BeautifulSoup** packages to scrape movie reviews from IMDb, and the **VADER SentimentIntensityAnalyzer** package to analyze the text reviews and derive sentiment scores. 
+
+Most coding was performed on a Windows machine, with some portions done using a Mac.
+
+---
 
 ## Section 2 - Map of Documentation
 
-In this section, you should provide an outline or tree illustrating the
-hierarchy of folders and subfolders contained in your Project Folder,
-and listing the files stored in each folder or subfolder.
+### Project Folder Structure:
 
-## Section 3 - Instructions
+```
+DS-4002-Project-1/
+│
+├── DATA/
+│   ├── bechdel_movies_2023_FEB.csv
+│   ├── bechdel_movies_combined.csv
+│   ├── bechdel_movies_with_sentiment.csv
+│   ├── bechdel_movies.csv
+│   └── new_movies.csv
+│
+├── OUTPUT/
+│   ├── Analysis/
+│   │   └── (analysis results saved here)
+│   └── Exploratory/
+│       ├── DistributionofBechdelRatings.png
+│       ├── DistributionofSentimentScores.png
+│       ├── MoviesThatPassBechdel.png
+│       ├── PairPlotKey.png
+│       ├── PairPlotYearSentimentRating.png
+│       ├── PassOrFailBechdel.png
+│       └── YearvsSentimentScore.png
+│
+├── SCRIPTS/
+│   ├── ExploratoryPlots.py
+│   ├── IMDbReviewSentiment.py
+│   ├── RoundSentiment.py
+│   └── ScrapeNewBechdel.py
+│
+├── LICENSE.md
+└── README.md
+```
 
-Step 1: Find our initial dataset
+- **DATA/**: Contains the various CSV files used throughout the project. These include the Bechdel movie datasets and sentiment data.
+- **OUTPUT/**:
+  - **Analysis/**: Folder to store the analysis results.
+  - **Exploratory/**: Contains all the exploratory plots generated, such as sentiment and Bechdel test distributions.
+- **SCRIPTS/**: Python scripts used in the project:
+  - **ExploratoryPlots.py**: Script to generate exploratory visualizations.
+  - **IMDbReviewSentiment.py**: Script to scrape IMDb reviews and calculate sentiment scores using VADER.
+  - **RoundSentiment.py**: Script to round the sentiment scores to 2 decimal places.
+  - **ScrapeNewBechdel.py**: Script to scrape new movie data from the Bechdel test website.
+  
+---
 
-To begin collecting data to conduct our analysis, a dataset was found that included over 9,000 movies from various decades, each with a Bechdel test rating indicating whether the movie passed or failed the test. The dataset contains information on the Bechdel test results, such as whether the movie met the criteria (e.g., two named women, talking to each other, and not about a man), as well as the year of release. Once identifying this primary dataset, we focused on scraping reviews for the movies to compare their sentiment with the Bechdel test outcomes.
+## Section 3 - Instructions for Reproducing Results
 
-Step 2: scrape the IMDB movie review data
+Follow the steps below to reproduce the results of this project:
 
-To begin collecting the sentiment data for the movies found in the Bechdel test dataset, around 15-20 reviews per movie were scraped from IMDb using Python, with a balance of both positive and negative reviews. These reviews were later used to generate the sentiment score for each movie using sentiment analysis techniques.
+### Step 1: Dataset Collection
+- Download the **Bechdel Test Dataset** from [Kaggle](https://www.kaggle.com/datasets/treelunar/bechdel-test-movies-as-of-feb-28-2023). This dataset includes over 9,000 movies, their Bechdel test ratings, and additional information such as the year of release.
+- Place the downloaded CSV files in the **DATA/** folder of the project.
 
-Step 3: Sentiment Analysis 
+### Step 2: Gather Updated Bechdel Scores
+- Use the **ScrapeNewBechdel.py** script to scrape the Bechdel test scores for movies added to the Bechdel test website from **February 2023 to the present**.
+- This will gather the most recent Bechdel test ratings and add them to your dataset. Ensure that the scraped data is saved in the **bechdel_movies_combined.csv** file inside the **DATA/** folder.
 
-Each review, whether positive or negative, will be analyzed using the VADER sentiment analysis package in Python. In total, approximately 200,000 movie reviews will be analyzed to generate sentiment scores. The analysis will return positive, negative, neutral, and compound sentiment scores for each review. For this analysis, the compound sentiment score will be the key value added to the dataset for further evaluation.
+### Step 3: Scrape IMDb Reviews
+- Use the **IMDbReviewSentiment.py** script to scrape reviews for each movie in the Bechdel test dataset. This script will gather around 15-20 reviews per movie using Python's `requests` and `BeautifulSoup` libraries.
+- Ensure that IMDb allows you to scrape reviews by checking their terms of service before running the script.
 
-Step 4: Data compilation into CSV and Exploratory Data Analysis
+### Step 4: Sentiment Analysis
+- Run the **IMDbReviewSentiment.py** script to apply VADER sentiment analysis to the collected IMDb reviews. The script will output sentiment scores (positive, negative, neutral, and compound).
+- The **compound sentiment score** is the main focus, and it will be added to the movie dataset.
 
-The information containing the Bechdel test results and the average sentiment score score from the movie reviews will be combined into a single data set. After appending the average sentiment score from each movie, the completed data set now has information about the movie release time, type of Bechdel test applied, budget information, and average sentiment score using the positive, negative, and neutral reviews.
+### Step 5: Data Compilation and Exploratory Analysis
+- Once the sentiment analysis is complete, the dataset containing Bechdel test results and the sentiment scores will be combined into a single CSV file, located in the **DATA/** folder.
+- You can run **ExploratoryPlots.py** to generate various plots for exploratory data analysis, including distributions of Bechdel test ratings, sentiment scores, and a pair plot showing the relationships between `year`, `rating`, and `sentiment`.
 
-Step 5: Hypothesis testing
+### Step 6: Hypothesis Testing
+- Use logistic regression to test the hypothesis that a movie passing the Bechdel test is more likely to have a positive sentiment score.
+- The logistic regression model can be built using libraries like `sklearn` in Python, which will allow you to evaluate whether passing the Bechdel test significantly affects sentiment scores.
 
-The hypothesis that passing the Bechdel test will make the movie more likely to have a positive sentiment score will be tested by completing a logistical regression. Conducting a logistic regression analysis will allow for a prediction to be made if a movie that passes or fails the Bechdel test is more likely to have a positive, neutral, or negative sentiment score based on the given data. The goal is to have a statistically significant p value of less than 0.05, which will confirm or reject our hypothesis, H1. 
+### Optional Step: Rounding Sentiment Scores
+- Use **RoundSentiment.py** to round the sentiment scores to two decimal places for easier interpretation.
+
+By following these steps, you will be able to reproduce the data scraping, sentiment analysis, exploratory plots, and hypothesis testing used in this project.
+
+---
 
 ## References 
 
