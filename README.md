@@ -24,3 +24,21 @@ The information containing the Bechdel test results and the average sentiment sc
 
 Step 5: Hypothesis testing
 The hypothesis that passing the Bechdel test will make the movie more likely to have a positive sentiment score will be tested by completing a logistical regression. Conducting a logistic regression analysis will allow for a prediction to be made if a movie that passes or fails the Bechdel test is more likely to have a positive, neutral, or negative sentiment score based on the given data. The goal is to have a statistically significant p value of less than 0.05, which will confirm or reject our hypothesis, H1. 
+
+## References 
+
+[1] “vaderSentiment,” PyPI, Apr. 23, 2018. https://pypi.org/project/vaderSentiment/.
+
+[3] “Bechdel Test Movies,” kaggle.com.
+https://www.kaggle.com/datasets/treelunar/bechdel-test-movies-as-of-feb-28-2023
+
+[4] Shih, J. (2024, July 3).Interpreting the score and ratio of sentiment analysis. Twinword.
+https://www.twinword.com/blog/interpreting-the-score-and-ratio-of-sentiment/#:~:text=The%20sc
+ore%20indicates%20how%20negative,inclusively%2C%20we%20tag%20as%20neutral
+
+[5] J. Light, “What Is the Bechdel Test and How Will It Help Your Writing?,” nofilmschool.com, 
+Jan. 25, 2024. https://nofilmschool.com/bechdel-test
+
+[6] “Bechdel Test Movie List” bechdeltest.com
+https://bechdeltest.com/
+
