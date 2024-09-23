@@ -6,7 +6,7 @@ import re
 from timeit import default_timer as timer
 
 # Load the existing dataset
-old_movies_df = pd.read_csv('./data/bechdel_movies_2023_FEB.csv')
+old_movies_df = pd.read_csv('./DATA/bechdel_movies_2023_FEB.csv')
 
 # Convert the 'date' column to datetime format in the existing dataset
 old_movies_df['date'] = pd.to_datetime(old_movies_df['date'])
@@ -77,7 +77,7 @@ for count, imdbid in enumerate(new_movie_imdbid, start=1):
 new_movies_df = pd.DataFrame(new_movies_info)
 
 # Save the scraped data
-new_movies_df.to_csv('./data/new_movies.csv', index=False)
+new_movies_df.to_csv('./DATA/new_movies.csv', index=False)
 
 # Reindex columns to match old dataset
 new_movies_df = new_movies_df.reindex(columns=['title', 'year', 'rating', 'dubious', 'imdbid', 'id', 'submitterid', 'date', 'visible'])
@@ -89,7 +89,7 @@ combined_df = pd.concat([old_movies_df, new_movies_df], ignore_index=True)
 combined_df.drop_duplicates(inplace=True)
 
 # Save the final combined dataset
-combined_df.to_csv('./data/bechdel_movies_combined.csv', index=False)
+combined_df.to_csv('./DATA/bechdel_movies_combined.csv', index=False)
 
 # Print time taken
 print(f'It took {timer() - start} seconds to scrape all the information and combine the datasets.')

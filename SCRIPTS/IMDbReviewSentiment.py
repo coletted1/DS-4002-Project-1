@@ -91,7 +91,7 @@ sentiment_scores = process_movies_in_batches(df, batch_size=100, max_workers=10)
 df['sentiment'] = sentiment_scores
 
 # Save the updated dataframe
-df.to_csv('./data/bechdel_movies_with_sentiment.csv', index=False)
+df.to_csv('.DATA/bechdel_movies_with_sentiment.csv', index=False)
 
 # Preview the updated dataframe
 df.head()

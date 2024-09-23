@@ -69,6 +69,7 @@ Follow the steps below to reproduce the results of this project:
 - This will gather the most recent Bechdel test ratings and add them to your dataset. Ensure that the scraped data is saved in the **bechdel_movies_combined.csv** file inside the **DATA/** folder.
 
 ### Step 3: Scrape IMDb Reviews
+- Warning: This step can take up to an hour depending on the number of movies and the speed of your internet connection. IMDb may also limit the number of requests you can make in a short period.
 - Use the **IMDbReviewSentiment.py** script to scrape reviews for each movie in the Bechdel test dataset. This script will gather around 15-20 reviews per movie using Python's `requests` and `BeautifulSoup` libraries.
 - Ensure that IMDb allows you to scrape reviews by checking their terms of service before running the script.
 
