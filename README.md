@@ -20,7 +20,8 @@ DS-4002-Project-1/
 │   ├── bechdel_movies_combined.csv
 │   ├── bechdel_movies_with_sentiment.csv
 │   ├── bechdel_movies.csv
-│   └── new_movies.csv
+│   ├── new_movies.csv
+│   └── data_appendix.pdf
 │
 ├── OUTPUT/
 │   ├── Analysis/
