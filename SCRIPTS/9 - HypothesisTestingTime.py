@@ -1,3 +1,13 @@
+'''
+Hypothesis Testing
+This script executes multiple methods of statistical hypothesis testing to look at relationships between variables in the Bechdel test dataset.
+- Hypothesis test of Year and Bechdel score with a 2 sample t-test
+- Hypothesis test of proportion of movies that pass the Bechdel test over time with a chi-square test
+- Hypothesis test of Year versus Sentiment Score with a Pearson/Spearman Correlation
+
+Running this script requires the scipy.stats and pandas libraries
+'''
+
 from scipy.stats import chi2_contingency, ttest_ind, pearsonr, spearmanr
 import pandas as pd
 
