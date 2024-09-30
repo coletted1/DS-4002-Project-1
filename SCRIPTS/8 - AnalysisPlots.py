@@ -1,3 +1,10 @@
+'''
+Generating Analysis Plots
+This script loads the data from bechdel_movies.csv and cleans it. Then subsets of the data are created to ease the process of generating plots.
+
+Running this script requires the pandas and matplotlib.pyplot libraries.
+'''
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
