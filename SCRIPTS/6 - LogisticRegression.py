@@ -1,3 +1,12 @@
+'''
+Logistic Regression on the Bechdel Test Dataset
+This script predicts whether or not a movie passes the Bechdel test as a binary using the sentiment score and linear regression.
+It converts the rating into a binary for easier analysis, drops rows with missing sentiment values, splits the dataset into a train and test set, and then applies
+logistic regression to the training data. The test set is used to make predictions, and the performance of the model is evaluated with an accuracy score and report.
+
+Running this script requires the numpy, sklearn, and pandas libraries.
+'''
+
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
