@@ -25,12 +25,17 @@ DS-4002-Project-1/
 │
 ├── OUTPUT/
 │   ├── Analysis/
-│   │   └── (analysis results saved here)
+│   │   ├── AverageSentimentScoreOverTime.png
+│   │   ├── HeatmapNumericalFeatures.png
+│   │   ├── PassByDecade.png
+│   │   ├── PassFailvsSentimentScore.png
+│   │   ├── ProportionOfMoviesPassingOverTime.png
+│   │   ├── ScoreOfMoviesPassingVersusFailingOverTime.png
+│   │   └── SentimentOverTimeBoxplot.png
 │   └── Exploratory/
 │       ├── DistributionofBechdelRatings.png
 │       ├── DistributionofSentimentScores.png
 │       ├── MoviesThatPassBechdel.png
-│       ├── PairPlotKey.png
 │       ├── PairPlotYearSentimentRating.png
 │       ├── PassOrFailBechdel.png
 │       └── YearvsSentimentScore.png
