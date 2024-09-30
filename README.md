@@ -96,7 +96,7 @@ Follow the steps below to reproduce the results of this project:
 ### Step 5: Data Compilation and Exploratory Analysis
 - Once the sentiment analysis is complete, the dataset containing Bechdel test results and the sentiment scores will be combined into a single CSV file, located in the **DATA/** folder.
 - You can run **3-ExploratoryPlots.py** to generate various plots for exploratory data analysis, including distributions of Bechdel test ratings, sentiment scores, and a pair plot showing the relationships between `year`, `rating`, and `sentiment`.
-- Run **5-AddBinaryRating.py** to simplify the rating variable into a binary pass/fail of the Bechdel test. This will make the next steps with hypothesis testing much easier.
+- Run **5-AddBinaryRating.py** to simplify the `rating` variable into a binary pass/fail of the Bechdel test. This will make the next steps with hypothesis testing much easier.
 
 ### Step 6: Hypothesis Testing
 - Use **6-LogisticRegression.py** to test the hypothesis that a movie passing the Bechdel test is more likely to have a positive sentiment score.
