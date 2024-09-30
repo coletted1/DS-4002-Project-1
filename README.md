@@ -59,11 +59,11 @@ DS-4002-Project-1/
   - **2-IMDbReviewSentiment.py**: Script to scrape IMDb reviews and calculate sentiment scores using VADER.
   - **3-ExploratoryPlots.py**: Script to generate exploratory visualizations.
   - **4-RoundSentiment.py**: Script to round the sentiment scores to 2 decimal places.
-  - **5-AddBinaryRating.py**: Script to
-  - **6-LogisticRegression.py**: Script to
-  - **7-HypothesisTesting.py**:
-  - **8-AnalysisPlots.py**:
-  - **9-HypothesisTestingTime.py**:
+  - **5-AddBinaryRating.py**: Script to simplify the Bechdel rating into a pass/fail binary.
+  - **6-LogisticRegression.py**: Script to perform logistic regression on the variables `rating_binary` and `sentiment`.
+  - **7-HypothesisTesting.py**: Script to perform statistical tests on `rating_binary` and `sentiment`.
+  - **8-AnalysisPlots.py**: Script to generate plots that allow for analysis of relationships between various variables in the **bechdel_movies.csv** file.
+  - **9-HypothesisTestingTime.py**: Script to perform more hypothesis testing and output p-values.
   
 ---
 
