@@ -36,10 +36,15 @@ DS-4002-Project-1/
 │       └── YearvsSentimentScore.png
 │
 ├── SCRIPTS/
-│   ├── ExploratoryPlots.py
-│   ├── IMDbReviewSentiment.py
-│   ├── RoundSentiment.py
-│   └── ScrapeNewBechdel.py
+│   ├── 1-ScrapeNewBechdel.py
+│   ├── 2-IMDbReviewSentiment.py
+│   ├── 3-ExploratoryPlots.py
+│   ├── 4-RoundSentiment.py
+│   ├── 5-AddBinaryRating.py
+│   ├── 6-LogisticRegression.py
+│   ├── 7-HypothesisTesting.py
+│   ├── 8-AnalysisPlots.py
+│   └── 9-HypothesisTestingTime.py
 │
 ├── LICENSE.md
 └── README.md
@@ -50,10 +55,15 @@ DS-4002-Project-1/
   - **Analysis/**: Folder to store the analysis results.
   - **Exploratory/**: Contains all the exploratory plots generated, such as sentiment and Bechdel test distributions.
 - **SCRIPTS/**: Python scripts used in the project:
-  - **ExploratoryPlots.py**: Script to generate exploratory visualizations.
-  - **IMDbReviewSentiment.py**: Script to scrape IMDb reviews and calculate sentiment scores using VADER.
-  - **RoundSentiment.py**: Script to round the sentiment scores to 2 decimal places.
-  - **ScrapeNewBechdel.py**: Script to scrape new movie data from the Bechdel test website.
+  - **1-ScrapeNewBechdel.py**: Script to scrape new movie data from the Bechdel test website.
+  - **2-IMDbReviewSentiment.py**: Script to scrape IMDb reviews and calculate sentiment scores using VADER.
+  - **3-ExploratoryPlots.py**: Script to generate exploratory visualizations.
+  - **4-RoundSentiment.py**: Script to round the sentiment scores to 2 decimal places.
+  - **5-AddBinaryRating.py**: Script to
+  - **6-LogisticRegression.py**: Script to
+  - **7-HypothesisTesting.py**:
+  - **8-AnalysisPlots.py**:
+  - **9-HypothesisTestingTime.py**:
   
 ---
 
